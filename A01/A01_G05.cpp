@@ -130,18 +130,18 @@ void forward_list_auto_e(std::forward_list<int>fl1) {
 }
 
 //MAP
-void second_it_l(std::map<int, int>m1) {
+void map_begin_to_end(std::map<char, int>m1) {
+	std::cout << "begin to end:" << std::endl;
 	for (auto it = m1.begin(); it != m1.end(); ++it) {
 		std::cout << it->first << " => " << it->second << "\n";
 	}
-	std::cout << std::endl;
 }
 
-void fourth_it_l(std::map<int, int>m1) {
+void map_rbegin_to_rend(std::map<char, int>m1) {
+	std::cout << "rbegin to rend:" << std::endl;
 	for (auto it = m1.rbegin(); it != m1.rend(); ++it) {
 		std::cout << it->first << " => " << it->second << "\n";
 	}
-	std::cout << std::endl;
 }
 
 //SET
@@ -257,6 +257,15 @@ int main() {
 
 	//MAP
 	std::cout << "MAP:" << std::endl;
+	std::map<char, int>m1;
+	m1['a'] = 5;
+	m1['b'] = 0;
+	m1['c'] = 6;
+	m1['d'] = 9;
+	m1['e'] = 2;
+
+	map_begin_to_end(m1);
+	map_rbegin_to_rend(m1);
 
 	std::cout << std::endl;
 
