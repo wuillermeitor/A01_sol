@@ -83,7 +83,7 @@ void deque_auto_e(std::deque<int>d1) {
 }
 
 //LIST
-void second_it_l(std::list<int>l1) {
+void list_begin_to_end(std::list<int>l1) {
 	std::cout << "begin to end: " << std::endl;
 	std::cout << "- ";
 	for (std::list<int>::iterator it = l1.begin(); it != l1.end(); ++it) {
@@ -92,16 +92,7 @@ void second_it_l(std::list<int>l1) {
 	std::cout << std::endl;
 }
 
-void third_it_l(std::list<int>l1) {
-	std::cout << "auto e: " << std::endl;
-	std::cout << "- ";
-	for (auto e : l1) {
-		std::cout << e << " ";
-	}
-	std::cout << std::endl;
-}
-
-void fourth_it_l(std::list<int>l1) {
+void list_rbegin_to_rend(std::list<int>l1) {
 	std::cout << "rbegin to rend: " << std::endl;
 	std::cout << "- ";
 	for (std::list<int>::reverse_iterator it = l1.rbegin(); it != l1.rend(); ++it) {
@@ -110,8 +101,17 @@ void fourth_it_l(std::list<int>l1) {
 	std::cout << std::endl;
 }
 
+void list_auto_e(std::list<int>l1) {
+	std::cout << "auto e: " << std::endl;
+	std::cout << "- ";
+	for (auto e : l1) {
+		std::cout << e << " ";
+	}
+	std::cout << std::endl;
+}
+
 //FORWARD LIST
-void second_it_fl(std::forward_list<int>fl1) {
+void forward_list_begin_to_end(std::forward_list<int>fl1) {
 	std::cout << "begin to end: " << std::endl;
 	std::cout << "- ";
 	for (std::forward_list<int>::iterator it = fl1.begin(); it != fl1.end(); ++it) {
@@ -120,7 +120,7 @@ void second_it_fl(std::forward_list<int>fl1) {
 	std::cout << std::endl;
 }
 
-void third_it_fl(std::forward_list<int>fl1) {
+void forward_list_auto_e(std::forward_list<int>fl1) {
 	std::cout << "auto e: " << std::endl;
 	std::cout << "- ";
 	for (auto e : fl1) {
@@ -228,9 +228,9 @@ int main() {
 	l5.pop_back();
 	l5.push_back(8);
 
-	second_it_l(l2);
-	third_it_l(l5);
-	fourth_it_l(l6);
+	list_begin_to_end(l2);
+	list_rbegin_to_rend(l5);
+	list_auto_e(l6);
 
 	std::cout << std::endl;
 
@@ -250,8 +250,8 @@ int main() {
 	fl5.pop_front();
 	fl5.push_front(3);
 
-	second_it_fl(fl2);
-	third_it_fl(fl5);
+	forward_list_begin_to_end(fl2);
+	forward_list_auto_e(fl5);
 
 	std::cout << std::endl;
 
