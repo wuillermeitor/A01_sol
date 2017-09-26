@@ -271,8 +271,9 @@ int main() {
 
 	//SET
 	std::cout << "SET:" << std::endl;
-
+	std::set<std::pair<std::string, int>>s1;
 	std::cout << std::endl;
+
 
 	return 0;
 }
